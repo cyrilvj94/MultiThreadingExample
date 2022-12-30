@@ -17,7 +17,7 @@ class ExecutorImpl(var num:Int):Runnable {
 
 fun main(){
 
-    val service:ExecutorService = Executors.newFixedThreadPool(2)
+    val service:ExecutorService = Executors.newFixedThreadPool(10)
     var start = System.currentTimeMillis()
     for ( i in Utils.divList){
         service.execute(ExecutorImpl(i))
